@@ -8,8 +8,14 @@ import jakarta.persistence.Entity;
 @Entity
 public class Price extends PanacheEntity {
 
-    @Column(unique=true)
+    @Column(unique = true)
     public int value;
 
 
+    public Price() {
+    }
+
+    public Price(Price price) {
+        this.value = price.value;
+    }
 }
